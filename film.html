@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Film Details</title>
+        <link rel="stylesheet" href="css/film/styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    </head>
+    <header class="header">
+        <div class="layout-box2">
+            <img src="images/logo-1x.png" alt class="logo">
+            <nav class="nav">
+                <ul class="menu">
+                    <li class="item"><a href="index.html">Home</a></li>
+                    <li>
+                        <span class="separator">/</span>
+                    </li>
+                    <li class="item"><a href="#">Features</a></li>
+                    <li>
+                        <span class="separator">/</span>
+                    </li>
+                    <li class="item"><a href="#">About</a></li>
+                    <li>
+                        <span class="separator">/</span>
+                    </li>
+                    <li class="item"><a href="#">News</a></li>
+                    <li>
+                        <span class="separator">/</span>
+                    </li>
+                    <li class="item"><a href="#">Contacts</a></li>
+                </ul>
+            </nav>
+            <div class="tools">
+                <search class="search">
+                    <button class="icon outlined">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            height="24px"
+                            viewBox="0 -960 960 960" width="24px"
+                            fill="#e8eaed">
+                            <path
+                                d="M784-120 532-372q-30 24-69 38t-83 14q-109
+                     0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 
+                     83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 
+                     0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z" />
+                        </svg>
+                    </button>
+                </search>
+                <span class="separator">|</span>
+                <nav class="nav">
+                    <ul class="social">
+                        <li class="icon outlined">
+                            <a href="https://twitter.com/MrFlexaverde"
+                                target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 50 50"
+                                    width="48px"
+                                    height="48px"><path
+                                        d="M 5.9199219 6 L 20.582031 27.375 L 6.2304688 44 
+                            L 9.4101562 44 L 21.986328 29.421875 L 31.986328 44 L 44 44 L 28.681641 
+                            21.669922 L 42.199219 6 L 39.029297 6 L 27.275391 19.617188 L 17.933594 6 
+                            L 5.9199219 6 z M 9.7167969 8 
+                                L 16.880859 8 L 40.203125 42 L 33.039062 42 L 9.7167969 8 z" /></svg>
+                            </a>
+                        </li>
+                        <li class="icon outlined">
+                            <a href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 50 50"
+                                    width="48px"
+                                    height="48px"><path
+                                        d="M 25 3 C 12.861562 3 3 12.861562 3 25 C 3 36.019135 11.127533 
+                            45.138355 21.712891 46.728516 L 22.861328 46.902344 L 22.861328 29.566406 L 17.664062 
+                            29.566406 L 17.664062 26.046875 L 22.861328 26.046875 L 22.861328 21.373047 
+                            C 22.861328 18.494965 23.551973 16.599417 24.695312 15.410156 C 25.838652 14.220896 
+                            27.528004 13.621094 29.878906 13.621094 C 31.758714 13.621094 32.490022 13.734993 
+                            33.185547 13.820312 L 33.185547 16.701172 L 30.738281 16.701172 C 29.349697 
+                            16.701172 28.210449 17.475903 27.619141 18.507812 C 27.027832 19.539724 26.84375 
+                            20.771816 26.84375 22.027344 L 26.84375 26.044922 L 32.966797 26.044922 L 32.421875 29.564453 L 26.84375 29.564453 L 26.84375 46.929688 L 27.978516 46.775391 C 38.71434 45.319366 47 36.126845 47 25 C 47 12.861562 37.138438 3 25 3 z M 25 5 C 36.057562 5 45 13.942438 45 25 C 45 34.729791 38.035799 42.731796 28.84375 44.533203 L 28.84375 31.564453 L 34.136719 31.564453 L 35.298828 24.044922 L 28.84375 24.044922 L 28.84375 22.027344 C 28.84375 20.989871 29.033574 20.060293 29.353516 19.501953 C 29.673457 18.943614 29.981865 18.701172 30.738281 18.701172 L 35.185547 18.701172 L 35.185547 12.009766 L 34.318359 11.892578 C 33.718567 11.811418 32.349197 11.621094 29.878906 11.621094 C 27.175808 11.621094 24.855567 12.357448 23.253906 14.023438 C 21.652246 15.689426 20.861328 18.170128 20.861328 21.373047 L 20.861328 24.046875 L 15.664062 24.046875 L 15.664062 31.566406 L 20.861328 31.566406 L 20.861328 44.470703
+                                 C 11.816995 42.554813 5 34.624447 5 25 C 5 13.942438 13.942438 5 25 5 z" /></svg>
+                            </a>
+                        </li>
+                        <li class="icon outined">
+                            <a
+                                href="https://www.instagram.com/juanma_rodrguez/"
+                                target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 50 50"
+                                    width="48px"
+                                    height="48px"><path
+                                        d="M 16 3 C 8.8324839 3 3 8.8324839 3 16 L 3 34 
+                            C 3 41.167516 8.8324839 47 16 47 L 34 47 C 41.167516 47 47 41.167516 
+                            47 34 L 47 16 C 47 8.8324839 41.167516 3 34 3 L 16 3 z M 16 5 L 34 5 C 
+                            40.086484 5 45 9.9135161 45 16 L 45 34 C 45 40.086484 40.086484 45 34 45 
+                            L 16 45 C 9.9135161 45 5 40.086484 5 34 L 5 16 C 5 9.9135161 9.9135161 5 16 5 z M 
+                            37 11 A 2 2 0 0 0 35 13 A 2 2 0 0 0 37 15 A 2 2 0 0 0 39 13 A 2 2 0 0 0 37 11 z M 
+                            25 14 C 18.936712 14 14 18.936712 14 25 C 14 31.063288 18.936712 36 25 36 C 31.063288 
+                            36 36 31.063288 36 25 C 36 18.936712 31.063288 14 25 14 z M 25 16 C 29.982407 16 34 20.017593 34 25 C 34 29.982407 29.982407 34 25 34
+                                 C 20.017593 34 16 29.982407 16 25 C 16 20.017593 20.017593 16 25 16 z" /></svg>
+                            </a>
+                        </li>
+                        <li class="icon outlined">
+                            <a
+                                href="https://www.youtube.com/watch?v=ArHSMbhjLiE"
+                                target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 48 48" width="48px"
+                                    height="48px">
+                                    <path fill="#FF3D00"
+                                        d="M43.2,33.9c-0.4,2.1-2.1,3.7-4.2,4c-3.3,0.5-8.8,1.1-15,1.1c-6.1,0-11.6-0.6-15-1.1c-2.1-0.3-3.8-1.9-4.2-4C4.4,31.6,4,28.2,4,24c0-4.2,0.4-7.6,0.8-9.9c0.4-2.1,2.1-3.7,4.2
+                        -4C12.3,9.6,17.8,9,24,9c6.2,0,11.6,0.6,15,1.1c2.1,0.3,3.8,1.9,4.2,4c0.4,2.3,0.9,5.7,0.9,9.9C44,28.2,43.6,31.6,43.2,33.9z" />
+                                    <path fill="#FFF"
+                                        d="M20 31L20 17 32 24z" /></svg>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <section class="background__film">
+        <div class="film__data">
+            <h1 class="film__data-title">The Lord of the Rings: The fellowship
+                of the ring</h1>
+            <div class="film__data-category">
+                <ul>
+                    <li class="film__category-item1">Adventure</li>
+                    <li class="film__category-item2">Action</li>
+                    <li class="film__category-item3">Fantasy</li>
+                    <li class="film__category-item4">19 Dec 2001</li>
+                </ul>
+            </div>
+
+            <div class="container">
+                <div class="film__rate">
+                    <div class="film__rate-likes">
+                        <ul class="likes">
+                        </ul>
+
+                    </div>
+                    <div class="film__rate-data">
+                        <ul>
+                            <li class="item1">73%</li>
+                            <li class="film__rate-item">120k</li>
+                            <li class="film__rate-item">160k</li>
+                            <li class="film__rate-item">37.1k</li>
+                            <li class="film__rate-item">74</li>
+                            <li class="film__rate-item">16.4k</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <main>
+        <div class="layout layout-box2">
+            <section class="info__film">
+                <div class="info__film-container">
+                    <div class="info__film-sticky">
+                        <div class="sticky__shadow">
+                            <!-- Aqui va la imagen de la peli -->
+                            <div class="film__sticky-img">
+                                <img src="recursos_film_html/pequeña 2.jpg"
+                                    width="167px" alt="elseñordelosanillos">
+                            </div>
+                            <!-- Aqui las empresas donde ver la peli -->
+                            <div class="film__sticky-streaming">
+                                <div class="streaming__container">
+                                    <!-- Aqui van los diferentes enlaces con imagenes -->
+                                    <a href="#">
+                                        <div
+                                            class="streaming__container-item1">
+                                            <img
+                                                src="recursos_film_html/instagram-live.png"
+                                                width="40px" alt="live">
+                                        </div>
+                                    </a>
+                                    <a href="#">
+                                        <div
+                                            class="streaming__container-item2">
+                                            <img
+                                                src="recursos_film_html/netflix.png"
+                                                width="40px" alt>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <a href="#" class="film__sticky-watch">
+                                <div class="film__watch-icon">
+                                    <img
+                                        src="recursos_film_html/play-button.png"
+                                        alt="play_button">
+                                </div>
+                                <div class="film__watch-info">
+                                    <h3>watch now</h3>
+                                    <span>8 services</span>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- Lista de opciones del menu sticky -->
+                        <ul class="film__sticky-sections">
+                            <li>
+                                <a href="#">Overview</a>
+                            </li>
+                            <li>
+                                <a href="#">Activity</a>
+                            </li>
+                            <li>
+                                <a href="#">Actors</a>
+                            </li>
+                            <li>
+                                <a href="#">74 comments</a>
+                            </li>
+                            <li>
+                                <a href="#">16.436 lists</a>
+                            </li>
+                        </ul>
+                        <ul class="external">
+                            <li>
+                                <a href="#">Official site</a>
+                                <a href="#">IMDB</a>
+                                <a href="#">TMDB</a>
+                                <a href="#">Fanart.tv</a>
+                                <a href="#">
+                                    <!-- Aqui van los iconos de instagram y demas -->
+
+                                    <img src="recursos_film_html/play.png"
+                                        alt="justWatch">
+
+                                </a>
+                                <a href="#">
+                                    <div>
+                                        <img
+                                            src="recursos_film_html/wikipedia.png"
+                                            alt="wikipedia">
+                                    </div>
+                                </a>
+                                <a href="#">
+                                    <div>
+                                        <img
+                                            src="recursos_film_html/logo.png"
+                                            alt="instagram">
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mainContainer layout-box">
+                <!-- Section no cierra -->
+                <div class="mainContainer__additionalInfo">
+                    <!-- Div no cierra -->
+                    <ul class="mainContainer__additionalInfo-items">
+                        <li class="additionalInfo__item">
+                            <label class="additionalInfo__item--label">
+                                Released:
+                            </label>
+                            <span class="additionalInfo__item--content">
+                                December 10, 2001
+                            </span>
+
+                        </li>
+                        <li class="additionalInfo__item">
+                            <label class="additionalInfo__item--label">
+                                DVD:
+                            </label>
+                            <span class="additionalInfo__item--content">
+                                August 6, 2002
+                            </span>
+
+                        </li>
+                        <li class="additionalInfo__item">
+                            <label class="additionalInfo__item--label">
+                                Runtime:
+                            </label>
+                            <span class="additionalInfo__item--content">
+                                2h 58m
+                            </span>
+
+                        </li>
+                        <li class="additionalInfo__item">
+                            <label class="additionalInfo__item--label">
+                                Director:
+                            </label>
+                            <span class="additionalInfo__item--content">
+                                Peter Jackson
+                            </span>
+
+                        </li>
+                        <li class="additionalInfo__item">
+                            <label class="additionalInfo__item--label">
+                                Country:
+                            </label>
+                            <span class="additionalInfo__item--content">
+                                New Zealand
+                            </span>
+
+                        </li>
+                        <li class="additionalInfo__item">
+                            <label class="additionalInfo__item--label">
+                                Languages:
+                            </label>
+                            <span class="additionalInfo__item--content">
+                                English,Italian,Deutsch,Spanish
+                            </span>
+                            <a href="#"> + more</a>
+
+                        </li>
+                        <li class="additionalInfo__item">
+                            <label class="additionalInfo__item--label">
+                                Genres:
+                            </label>
+                            <span class="additionalInfo__item--content">
+                                Adventure, Action, Fantasy
+                            </span>
+
+                        </li>
+                        <li class="additionalInfo__item">
+                            <label class="additionalInfo__item--label">
+                                Studio:
+                            </label>
+                            <span class="additionalInfo__item--content">
+                                New Line Cinema WingNut
+                            </span>
+
+                        </li>
+                    </ul>
+
+                    <div class="additionalInfo__body">
+                        <div class="additionalInfo__body-text">
+                            <div class="additionalInfo__text1">
+                                <p>La trilogía cinematográfica de El Señor
+                                    de los Anillos, basada en la novela
+                                    homónima del escritor británico J. R. R.
+                                    Tolkien, comprende tres películas épicas
+                                    de fantasía, acción y aventuras: El
+                                    Señor de los Anillos: la Comunidad del
+                                    Anillo (2001), El Señor de los Anillos:
+                                    las dos torres (2002) y El Señor de los
+                                    Anillos: el retorno del Rey (2003).
+
+                                    Las tres películas fueron escritas,
+                                    producidas y dirigidas por Peter
+                                    Jackson, coescritas por Fran Walsh y
+                                    Philippa Boyens y distribuidas por New
+                                    Line Cinema. Considerado como uno de los
+                                    mayores proyectos cinematográficos
+                                    alguna vez acometidos, con una
+                                    recaudación global de más de 2900
+                                    millones USD,Nota 1​ el proyecto
+                                    completo duró ocho años, con la
+                                    filmación simultánea de las tres
+                                    películas y rodadas enteramente en la
+                                    tierra natal de Jackson, Nueva
+                                    Zelanda.</p>
+                            </div>
+
+                            <div class="additionalInfo__quote">
+                                <blockquote>
+                                    «Tres Anillos para los Reyes Elfos bajo
+                                    el cielo.
+                                    Siete para los Señores Enanos en casas
+                                    de piedra.
+                                    Nueve para los Hombres Mortales
+                                    condenados a morir.
+                                    Uno para el Señor Oscuro, sobre el trono
+                                    oscuro
+                                    en la Tierra de Mordor donde se
+                                    extienden las Sombras.
+                                    Un Anillo para gobernarlos a todos. Un
+                                    Anillo para encontrarlos,
+                                    un Anillo para atraerlos a todos y
+                                    atarlos en las tinieblas
+                                    en la Tierra de Mordor donde se
+                                    extienden las Sombras».
+
+                                    <span class="black_quote">J. R. R.
+                                        Tolkien, El Señor de los
+                                        Anillos​</span>
+                                </blockquote>
+                            </div>
+
+                            <div class="additionalInfo__text2">
+                                <p class="textp1">Aún con algunas
+                                    variaciones, la trilogía
+                                    se ciñe en líneas generales a la trama
+                                    principal de la novela sobre la que se
+                                    basa. Ambientada en el ficticio mundo de
+                                    la Tierra Media, sigue las aventuras del
+                                    hobbit Frodo Bolsón y sus compañeros en
+                                    su misión de destruir el Anillo Único y
+                                    asegurar así la aniquilación del Señor
+                                    Oscuro, Sauron. Sin embargo, esa
+                                    comunidad se rompe y Frodo continúa la
+                                    aventura junto a su fiel compañero Sam y
+                                    el traicionero Gollum. Por otro lado, el
+                                    mago Gandalf y Aragorn, heredero en el
+                                    exilio del trono de Gondor, se unen y
+                                    lideran a los pueblos libres de la
+                                    Tierra Media durante varias batallas
+                                    contra las fuerzas del mal. </p>
+
+                                <p class="textp2">
+                                    La trilogía cosechó un gran éxito de
+                                    taquilla: las películas alcanzaron,
+                                    respectivamente, los puestos 26.º, 19.º
+                                    y 6.º entre las más taquilleras de la
+                                    historia. También fueron aclamadas por
+                                    la crítica, al obtener un total de
+                                    diecisiete premios Óscar, diez premios
+                                    BAFTA y cuatro premios Globo de Oro, así
+                                    como amplias alabanzas hacia el reparto
+                                    y las innovaciones en lo referente a
+                                    efectos especiales digitales. Cada
+                                    película de la trilogía fue reeditada
+                                    como versión extendida, lanzada un año
+                                    después del lanzamiento en DVD de la
+                                    versión proyectada en las salas de
+                                    cine.</p>
+                            </div>
+
+                            <div class="additionalInfo__awards">
+                                <h2>Awards</h2>
+                                <ul>
+                                    <li>Best Film</li>
+                                    <li>Best Direction</li>
+                                    <li>Best Special Visual Effects</li>
+                                    <li>The Orange Film of the Year
+                                        Award</li>
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="additionalInfo__actors">
+                        <h2>Actors</h2>
+                        <a
+                            href="https://www.sensacine.com/peliculas/pelicula-27070/reparto/"
+                            class="additionalInfo__actors-cast">Cast
+                            complete here
+                        </a>
+
+                        <div class="actors__data">
+                            <ul>
+                                <li class="actors__data-item">
+                                    <div class="prueba">
+                                        <a
+                                            href="https://es.wikipedia.org/wiki/Elijah_Wood"
+                                            class="actors__data-container">
+                                            <div class="poster">
+                                                <img
+                                                    src="recursos_film_html/actors/frodo.jpeg"
+                                                    alt="frodo">
+                                            </div>
+                                            <div class="title">
+                                                <h3>Elijah Wood</h3>
+                                                <h4>Frodo Bolsón</h4>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+
+                                <li class="actors__data-item">
+                                    <a
+                                        href="https://es.wikipedia.org/wiki/Viggo_Mortensen"
+                                        class="actors__data-container">
+                                        <div class="poster">
+                                            <img
+                                                src="recursos_film_html/actors/aragorn.jpeg"
+                                                alt="aragorn">
+                                        </div>
+                                        <div class="title">
+                                            <h3>Viggo Mortensen</h3>
+                                            <h4>Aragorn</h4>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="actors__data-item">
+                                    <div class="prueba">
+                                        <a
+                                            href="https://es.wikipedia.org/wiki/Sean_Astin"
+                                            class="actors__data-container">
+                                            <div class="poster">
+                                                <img
+                                                    src="recursos_film_html/actors/sam.jpeg"
+                                                    alt="sam">
+                                            </div>
+                                            <div class="title">
+                                                <h3>Sean Astin</h3>
+                                                <h4>Samsagaz Gamyi</h4>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="actors__data-item">
+                                        <div class="prueba">
+                                            <a
+                                                href="https://es.wikipedia.org/wiki/Dominic_Monaghan"
+                                                class="actors__data-container">
+                                                <div class="poster">
+                                                    <img
+                                                        src="recursos_film_html/actors/merry.jpeg"
+                                                        alt="merry">
+                                                </div>
+                                                <div class="title">
+                                                    <h3>Dominic
+                                                        Monaghan</h3>
+                                                    <h4>Meriadoc
+                                                        Brandigamo</h4>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="actors__data-item">
+                                            <a
+                                                href="https://es.wikipedia.org/wiki/Orlando_Bloom"
+                                                class="actors__data-container">
+                                                <div class="poster">
+                                                    <img
+                                                        src="recursos_film_html/actors/legolas.jpeg"
+                                                        alt="legolas">
+                                                </div>
+                                                <div class="title">
+                                                    <h3>Orlando
+                                                        Bloom</h3>
+                                                    <h4>Legolas</h4>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="actors__data-item">
+                                            <a
+                                                href="https://es.wikipedia.org/wiki/Billy_Boyd"
+                                                class="actors__data-container">
+                                                <div class="poster">
+                                                    <img
+                                                        src="recursos_film_html/actors/pippin.jpeg"
+                                                        alt="pippin">
+                                                </div>
+                                                <div class="title">
+                                                    <h3>Billy Boyd</h3>
+                                                    <h4>Peregrin
+                                                        Tuk</h4>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="actors__data-item">
+                                            <a
+                                                href="https://es.wikipedia.org/wiki/Ian_McKellen"
+                                                class="actors__data-container">
+                                                <div class="poster">
+                                                    <img
+                                                        src="recursos_film_html/actors/gandalf.jpeg"
+                                                        alt="gandalf">
+                                                </div>
+                                                <div class="title">
+                                                    <h3>Ian
+                                                        Mckellen</h3>
+                                                    <h4>Gandalf</h4>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="actors__data-item">
+                                            <a
+                                                href="https://es.wikipedia.org/wiki/Sean_Bean"
+                                                class="actors__data-container">
+                                                <div class="poster">
+                                                    <img
+                                                        src="recursos_film_html/actors/boromir.jpeg"
+                                                        alt="boromir">
+                                                </div>
+                                                <div class="title">
+                                                    <h3>Sean Bean</h3>
+                                                    <h4>Boromir</h4>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="actors__data-item">
+                                            <a
+                                                href="https://es.wikipedia.org/wiki/Liv_Tyler"
+                                                class="actors__data-container">
+                                                <div class="poster">
+                                                    <img
+                                                        src="recursos_film_html/actors/arwen.jpeg"
+                                                        alt="arwen">
+                                                </div>
+                                                <div class="title">
+                                                    <h3>Liv Tyler</h3>
+                                                    <h4>Arwen</h4>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="actors__data-item">
+                                            <a
+                                                href="https://es.wikipedia.org/wiki/Andy_Serkis"
+                                                class="actors__data-container">
+                                                <div class="poster">
+                                                    <img
+                                                        src="recursos_film_html/actors/gollum.jpeg"
+                                                        alt="arwen">
+                                                </div>
+                                                <div class="title">
+                                                    <h3>Andy Serkis</h3>
+                                                    <h4>Gollum</h4>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="actors__data-item">
+                                            <a
+                                                href="https://es.wikipedia.org/wiki/John_Rhys-Davies"
+                                                class="actors__data-container">
+                                                <div class="poster">
+                                                    <img
+                                                        src="recursos_film_html/actors/gimli.jpeg"
+                                                        alt="arwen">
+                                                </div>
+                                                <div class="title">
+                                                    <h3>John
+                                                        Rhys-Davies</h3>
+                                                    <h4>Gimli,
+                                                        Bárbol</h4>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="actors__data-item">
+                                            <a
+                                                href="https://es.wikipedia.org/wiki/Cate_Blanchett"
+                                                class="actors__data-container">
+                                                <div class="poster">
+                                                    <img
+                                                        src="recursos_film_html/actors/galadriel.jpeg"
+                                                        alt="arwen">
+                                                </div>
+                                                <div class="title">
+                                                    <h3>Cate
+                                                        Blanchett</h3>
+                                                    <h4>Galadriel</h4>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="actors__data-item">
+                                            <a
+                                                href="https://es.wikipedia.org/wiki/Hugo_Weaving"
+                                                class="actors__data-container">
+                                                <div class="poster">
+                                                    <img
+                                                        src="recursos_film_html/actors/elrond.jpeg"
+                                                        alt="arwen">
+                                                </div>
+                                                <div class="title">
+                                                    <h3>Hugo
+                                                        Weaving</h3>
+                                                    <h4>Elrond</h4>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="actors__data-item">
+                                            <a
+                                                href="https://es.wikipedia.org/wiki/Christopher_Lee"
+                                                class="actors__data-container">
+                                                <div class="poster">
+                                                    <img
+                                                        src="recursos_film_html/actors/saruman.jpeg"
+                                                        alt="arwen">
+                                                </div>
+                                                <div class="title">
+                                                    <h3>Christopher
+                                                        Lee</h3>
+                                                    <h4>Saruman</h4>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="actors__data-item">
+                                            <a
+                                                href="https://es.wikipedia.org/wiki/Bernard_Hill"
+                                                class="actors__data-container">
+                                                <div class="poster">
+                                                    <img
+                                                        src="recursos_film_html/actors/theoden.jpeg"
+                                                        alt="arwen">
+                                                </div>
+                                                <div class="title">
+                                                    <h3>Bernard
+                                                        Hill</h3>
+                                                    <h4>Théoden</h4>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="actors__data-item">
+                                            <a
+                                                href="https://es.wikipedia.org/wiki/Miranda_Otto"
+                                                class="actors__data-container">
+                                                <div class="poster">
+                                                    <img
+                                                        src="recursos_film_html/actors/eowyn.jpeg"
+                                                        alt="arwen">
+                                                </div>
+                                                <div class="title">
+                                                    <h3>Miranda
+                                                        Otto</h3>
+                                                    <h4>Éowyn</h4>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <section class="comments layout-box">
+                        <div class="comments__form">
+                            <form action="#" method="post">
+                                <h3>Leave a comment</h3>
+                                <div class="input-group">
+                                    <input type="text" id="name" name="name"
+                                        placeholder="Your name *" required>
+                                    <input type="email" id="email"
+                                        name="email"
+                                        placeholder="Your e-mail *"
+                                        required>
+                                </div>
+                                <textarea id="comment" name="comment"
+                                    placeholder="Your comment"
+                                    required></textarea>
+
+                                <div class="checkbox-group">
+                                    <input type="checkbox"
+                                        id="acceptCookies"
+                                        name="acceptCookies" required>
+                                    <label for="acceptCookies">Save my name,
+                                        email, and website in this browser
+                                        for the next time I comment.</label>
+                                </div>
+
+                                <div class="checkbox-group">
+                                    <input type="checkbox"
+                                        id="acceptPrivacy"
+                                        name="acceptPrivacy" required>
+                                    <label for="acceptPrivacy"
+                                        class="acceptPrivacy">I agree that
+                                        my submitted data is being collected
+                                        and stored. See our
+                                        <a href="#"
+                                            target="_blank">Privacy
+                                            Policy</a></label>
+                                </div>
+
+                                <button class="submit__button"
+                                    type="submit">Leave a
+                                    comment</button>
+                            </form>
+                        </div>
+                    </section>
+                </div>
+            </main>
+            <footer class="footer-background">
+                <div class="footer-container">
+                    <ul class="footer-container_data layout-box">
+                        <li class="footer-datalist_title">
+                            <span class="title">Filmax</span>
+                            <ul class="footer-data_rights">
+                                <li>ThemeRex © 2024. All rights
+                                    reserved</li>
+                                <li>Juanma Rodríguez</li>
+                            </li>
+                        </ul>
+                        <li class="footer-datalist_title">
+                            <span class="title-data">Movies</span>
+                            <ul class="footer-datalist">
+                                <li><a href="#">Film News</a></li>
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Coming Soon</a></li>
+                                <li><a href="#">Most Popular</a></li>
+                                <li><a href="#">Top Trailers</a></li>
+                            </ul>
+                        </li>
+                        <li class="footer-datalist_title">
+                            <span class="title-data">Additional
+                                Links</span>
+                            <ul class="footer-datalist">
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Gallery</a></li>
+                                <li><a href="#">Service Plus</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="#">Contacts</a></li>
+                            </ul>
+                        </li>
+                        <li class="footer-datalist_title">
+                            <span class="title-data">Newsletter</span>
+                            <ul>
+                                <li class="footer-datalist">
+                                    <a href="#" class="footer-news">
+                                        Newsletter sing up
+                                    </a>
+                                </li>
+                            </ul>
+                            <span
+                                class="footer-datalist_separator"></span>
+                            <div class="footer-data_social">
+                                <a href="#">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 48 48" width="48px"
+                                        height="48px"
+                                        baseProfile="basic"><lineargradient
+                                            id="U8Yg0Q5gzpRbQDBSnSCfPa"
+                                            x1="4.338"
+                                            x2="38.984" y1="-10.056"
+                                            y2="49.954"
+                                            gradientUnits="userSpaceOnUse"><stop
+                                                offset="0"
+                                                stop-color="#4b4b4b" /><stop
+                                                offset=".247"
+                                                stop-color="#3e3e3e" /><stop
+                                                offset=".686"
+                                                stop-color="#2b2b2b" /><stop
+                                                offset="1"
+                                                stop-color="#252525" /></lineargradient><path
+                                            fill="url(#U8Yg0Q5gzpRbQDBSnSCfPa)"
+                                            d="M38,42H10c-2.209,0-4-1.791-4-4V10c0-2.209,1.791-4,4-4h28c2.209,0,4,1.791,4,4v28	C42,40.209,40.209,42,38,42z" /><path
+                                            fill="#fff"
+                                            d="M34.257,34h-6.437L13.829,14h6.437L34.257,34z M28.587,32.304h2.563L19.499,15.696h-2.563 L28.587,32.304z" /><polygon
+                                            fill="#fff"
+                                            points="15.866,34 23.069,25.656 22.127,24.407 13.823,34" /><polygon
+                                            fill="#fff"
+                                            points="24.45,21.721 25.355,23.01 33.136,14 31.136,14" /></svg>
+                                </a>
+
+                                <a href="#">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 48 48" width="48px"
+                                        height="48px"><lineargradient
+                                            id="awSgIinfw5_FS5MLHI~A9a"
+                                            x1="6.228"
+                                            x2="42.077" y1="4.896"
+                                            y2="43.432"
+                                            gradientUnits="userSpaceOnUse"><stop
+                                                offset="0"
+                                                stop-color="#0d61a9" /><stop
+                                                offset="1"
+                                                stop-color="#16528c" /></lineargradient><path
+                                            fill="url(#awSgIinfw5_FS5MLHI~A9a)"
+                                            d="M42,40c0,1.105-0.895,2-2,2H8c-1.105,0-2-0.895-2-2V8c0-1.105,0.895-2,2-2h32	c1.105,0,2,0.895,2,2V40z" /><path
+                                            d="M25,38V27h-4v-6h4v-2.138c0-5.042,2.666-7.818,7.505-7.818c1.995,0,3.077,0.14,3.598,0.208	l0.858,0.111L37,12.224L37,17h-3.635C32.237,17,32,18.378,32,19.535V21h4.723l-0.928,6H32v11H25z"
+                                            opacity=".05" /><path
+                                            d="M25.5,37.5v-11h-4v-5h4v-2.638c0-4.788,2.422-7.318,7.005-7.318c1.971,0,3.03,0.138,3.54,0.204	l0.436,0.057l0.02,0.442V16.5h-3.135c-1.623,0-1.865,1.901-1.865,3.035V21.5h4.64l-0.773,5H31.5v11H25.5z"
+                                            opacity=".07" /><path
+                                            fill="#fff"
+                                            d="M33.365,16H36v-3.754c-0.492-0.064-1.531-0.203-3.495-0.203c-4.101,0-6.505,2.08-6.505,6.819V22h-4v4	h4v11h5V26h3.938l0.618-4H31v-2.465C31,17.661,31.612,16,33.365,16z" /></svg>
+                                </a>
+
+                                <a href="#">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 48 48" width="48px"
+                                        height="48px"><radialgradient
+                                            id="yOrnnhliCrdS2gy~4tD8ma"
+                                            cx="19.38"
+                                            cy="42.035" r="44.899"
+                                            gradientUnits="userSpaceOnUse"><stop
+                                                offset="0"
+                                                stop-color="#fd5" /><stop
+                                                offset=".328"
+                                                stop-color="#ff543f" /><stop
+                                                offset=".348"
+                                                stop-color="#fc5245" /><stop
+                                                offset=".504"
+                                                stop-color="#e64771" /><stop
+                                                offset=".643"
+                                                stop-color="#d53e91" /><stop
+                                                offset=".761"
+                                                stop-color="#cc39a4" /><stop
+                                                offset=".841"
+                                                stop-color="#c837ab" /></radialgradient><path
+                                            fill="url(#yOrnnhliCrdS2gy~4tD8ma)"
+                                            d="M34.017,41.99l-20,0.019c-4.4,0.004-8.003-3.592-8.008-7.992l-0.019-20	c-0.004-4.4,3.592-8.003,7.992-8.008l20-0.019c4.4-0.004,8.003,3.592,8.008,7.992l0.019,20	C42.014,38.383,38.417,41.986,34.017,41.99z" /><radialgradient
+                                            id="yOrnnhliCrdS2gy~4tD8mb"
+                                            cx="11.786"
+                                            cy="5.54" r="29.813"
+                                            gradientTransform="matrix(1 0 0 .6663 0 1.849)"
+                                            gradientUnits="userSpaceOnUse"><stop
+                                                offset="0"
+                                                stop-color="#4168c9" /><stop
+                                                offset=".999"
+                                                stop-color="#4168c9"
+                                                stop-opacity="0" /></radialgradient><path
+                                            fill="url(#yOrnnhliCrdS2gy~4tD8mb)"
+                                            d="M34.017,41.99l-20,0.019c-4.4,0.004-8.003-3.592-8.008-7.992l-0.019-20	c-0.004-4.4,3.592-8.003,7.992-8.008l20-0.019c4.4-0.004,8.003,3.592,8.008,7.992l0.019,20	C42.014,38.383,38.417,41.986,34.017,41.99z" /><path
+                                            fill="#fff"
+                                            d="M24,31c-3.859,0-7-3.14-7-7s3.141-7,7-7s7,3.14,7,7S27.859,31,24,31z M24,19c-2.757,0-5,2.243-5,5	s2.243,5,5,5s5-2.243,5-5S26.757,19,24,19z" /><circle
+                                            cx="31.5" cy="16.5" r="1.5"
+                                            fill="#fff" /><path
+                                            fill="#fff"
+                                            d="M30,37H18c-3.859,0-7-3.14-7-7V18c0-3.86,3.141-7,7-7h12c3.859,0,7,3.14,7,7v12	C37,33.86,33.859,37,30,37z M18,13c-2.757,0-5,2.243-5,5v12c0,2.757,2.243,5,5,5h12c2.757,0,5-2.243,5-5V18c0-2.757-2.243-5-5-5H18z" /></svg>
+                                </a>
+
+                                <a href="#">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 48 48" width="48px"
+                                        height="48px"><path
+                                            fill="#FF3D00"
+                                            d="M43.2,33.9c-0.4,2.1-2.1,3.7-4.2,4c-3.3,0.5-8.8,1.1-15,1.1c-6.1,0-11.6-0.6-15-1.1c-2.1-0.3-3.8-1.9-4.2-4C4.4,31.6,4,28.2,4,24c0-4.2,0.4-7.6,0.8-9.9c0.4-2.1,2.1-3.7,4.2-4C12.3,9.6,17.8,9,24,9c6.2,0,11.6,0.6,15,1.1c2.1,0.3,3.8,1.9,4.2,4c0.4,2.3,0.9,5.7,0.9,9.9C44,28.2,43.6,31.6,43.2,33.9z" /><path
+                                            fill="#FFF"
+                                            d="M20 31L20 17 32 24z" /></svg>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>

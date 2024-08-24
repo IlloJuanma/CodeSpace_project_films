@@ -1,0 +1,11 @@
+@import url(../index/reset.css);
+@import url(../index/variables.css);
+@import url(00-utilities.css);
+@import url(../index/01-layout-box.css);
+@import url(../index/02-header.css);
+@import url(11-background_fiml.css);
+@import url(12-film_info.css);
+@import url(13-film_layout_principal.css);
+@import url(14-mainContainer.css);
+@import url(15-form.css);
+@import url(../index/10-footer.css);

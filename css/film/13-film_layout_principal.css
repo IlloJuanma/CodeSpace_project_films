@@ -1,0 +1,5 @@
+/* Contenedor principal con flexbox */
+.layout {
+    display: flex;
+    align-items: start;
+}
